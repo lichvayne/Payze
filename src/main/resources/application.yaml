@@ -1,0 +1,20 @@
+uz-payze:
+  create-payment-url: ${CREATE_PAYMENT_URL:https://payze.io/v2/api/payment}
+  get-payment-url: ${GET_PAYMENT_URL:https://payze.io/v2/api/payment/query/token-based}
+  api-key: ${PAYZE_API_KEY:5D2E0C6F5AA34A889C61136F343EC1E4}
+  api-secret: ${PAYZE_API_SECRET:97691160143C48F784319A8FC96552DB}
+  webhook-gateway-url: ${WEBHOOK_URL:https://ba69-185-81-92-102.ngrok-free.app/api/payze/pay/hook}
+  success-redirect-gateway-url: ${SUCCESS_REDIRECT_URL:https://youtube.com}
+  error-redirect-gateway-url: ${SUCCESS_REDIRECT_URL:https://youtube.com}
+
+spring:
+  datasource:
+    url: ${DATABASE_URL:jdbc:postgresql://localhost:5433/payment}
+    password: ${DATABASE_PASSWORD:sweeft}
+    username: ${DATABASE_USERNAME:sweeft}
+    driver-class-name: org.postgresql.Driver
+
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
